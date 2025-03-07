@@ -1,0 +1,67 @@
+body {
+    background-color: #f5f5dc; /* Bej */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h2, p, ul {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+nav {
+    background-color: #003366; /* Bleumarin */
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0; /* Align to the left */
+    width: 100%; /* Stretched to full width */
+    z-index: 1000; /* Ensure it's on top of other content */
+    margin: 0; /* Remove default margin */
+
+}
+
+nav a {
+    text-decoration: none;
+    color: white; /* Text alb pentru contrast */
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 10px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #002855; /* O nuanță mai închisă la hover */
+    border-radius: 5px;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Optional: Add padding to the body to prevent content from being hidden under the fixed navbar */
+body {
+    margin: 0;
+    padding-top: 60px;
+}
