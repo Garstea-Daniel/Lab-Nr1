@@ -5,6 +5,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    padding-top: 80px
 }
 
 .container {
@@ -67,4 +68,218 @@ hr {
     background-color: #aaa;
     margin: 20px auto;
     width: 50%;
+}
+/* Mod întunecat pentru întreaga pagină */
+.dark-mode {
+    background-color: #121212; /* Fundal închis */
+    color: #f5f5f5; /* Text alb pentru întregul corp */
+}
+
+/* Modifică culoarea textului pentru titluri, paragrafe și liste */
+.dark-mode h1, .dark-mode h2, .dark-mode p, .dark-mode ul li {
+    color: #f5f5f5; /* Culoare albă pentru text */
+}
+
+/* Navbar stilizat */
+nav {
+    background-color: #003366; /* Bleumarin */
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navbar în dark mode */
+.dark-mode nav {
+    background-color: #222;
+}
+
+/* Link-uri în navbar */
+nav a, #theme-toggle {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 10px;
+    display: inline-block;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Hover pentru link-uri și buton */
+nav a:hover, #theme-toggle:hover {
+    background-color: #002855;
+    border-radius: 5px;
+}
+
+/* Link-uri în dark mode */
+.dark-mode a, .dark-mode #theme-toggle {
+    color: #f5f5f5;
+}
+
+.dark-mode a:hover, .dark-mode #theme-toggle:hover {
+    color: #ffcc00;
+}
+
+/* Integrarea butonului în navbar */
+#theme-toggle {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+/* Imagini - ajustare pentru modul întunecat */
+.dark-mode img {
+    filter: brightness(0.8);
+}
+#calculator {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #002855;
+}
+/* Calculator */
+#calculator {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Modificări pentru calculator în dark mode */
+.dark-mode #calculator {
+    background-color: #333; /* Fundal închis pentru modul întunecat */
+    color: #f5f5f5; /* Culoare text albă */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); /* Umbra deschisă pentru un contrast mai bun */
+}
+
+/* Etichete și câmpuri de input pentru calculator */
+.dark-mode label {
+    color: #f5f5f5; /* Culoare albă pentru etichete */
+}
+
+.dark-mode input[type="number"] {
+    background-color: #444; /* Fundal mai închis pentru input */
+    color: #f5f5f5; /* Culoare albă pentru text */
+    border: 1px solid #555; /* Bordură mai deschisă */
+}
+
+.dark-mode button {
+    background-color: #222; /* Fundal mai închis pentru buton */
+    color: #f5f5f5; /* Culoare albă pentru textul butonului */
+}
+
+.dark-mode button:hover {
+    background-color: #444; /* Fundal mai deschis la hover */
+}
+
+/* Rezultate (calculul) în dark mode */
+.dark-mode #average-consumption {
+    color: #ffcc00; /* Culoare galbenă pentru textul de rezultat */
+}
+/* Estimare costuri anuale */
+#annual-estimate {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#annual-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#annual-form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#annual-form button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#annual-form button:hover {
+    background-color: #002855;
+}
+
+/* Tabelul de estimare costuri anuale */
+#annual-costs {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#annual-costs th, #annual-costs td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#annual-costs th {
+    background-color: #003366;
+    color: white;
+}
+
+#annual-costs td {
+    background-color: #f5f5f5;
+}
+
+.dark-mode #annual-estimate {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.dark-mode #annual-costs th, .dark-mode #annual-costs td {
+    border: 1px solid #555;
+    color: #f5f5f5;
+}
+
+.dark-mode #annual-costs td {
+    background-color: #444;
 }

@@ -8,6 +8,7 @@
 </head>
 <body> 
     <nav>
+        <button id="theme-toggle">🌙 Mod întunecat</button> |
         <a href="index.html">Acasă</a> |
         <a href="services.html">Servicii</a> |
         <a href="pricing.html">Prețuri</a> |
@@ -20,13 +21,72 @@
     
     <h2>1. Calculator consum combustibil</h2>
     <p>Introdu distanța parcursă și cantitatea de combustibil consumată pentru a afla exact cât consumă mașina ta.</p>
-
+    <section id="calculator">
+        <h2>Calculator de combustibil</h2>
+        <form id="fuel-form">
+            <label for="distance">Distanță parcursă (km):</label>
+            <input type="number" id="distance" required><br><br>
+    
+            <label for="fuel-amount">Cantitate combustibil (litri):</label>
+            <input type="number" id="fuel-amount" required><br><br>
+    
+            <button type="submit">Calculează Consum Mediu</button>
+        </form>
+    
+        <p id="average-consumption"></p>
+    </section>
     <h2>2. Estimare costuri anuale</h2>
     <p>Obține o estimare precisă a cheltuielilor anuale, incluzând combustibil, asigurare și întreținere.</p>
-
+    <div id="annual-estimate">
+        <h2>Estimare Costuri Anuale</h2>
+        <form id="annual-form">
+            <label for="annual-distance">Distanța anuală parcursă (km):</label>
+            <input type="number" id="annual-distance" required>
+    
+            <label for="annual-consumption">Consumul mediu (l/100km):</label>
+            <input type="number" id="annual-consumption" required>
+    
+            <label for="fuel-price">Preț combustibil (Lei/l):</label>
+            <input type="number" id="fuel-price" required>
+    
+            <label for="insurance-cost">Cost asigurare anuală (Lei):</label>
+            <input type="number" id="insurance-cost" required>
+    
+            <label for="maintenance-cost">Cost întreținere anuală (Lei):</label>
+            <input type="number" id="maintenance-cost" required>
+    
+            <button type="submit">Calculează Estimarea</button>
+        </form>
+    
+        <div id="annual-result">
+            <table id="annual-costs">
+                <tr>
+                    <th>Tip cost</th>
+                    <th>Valoare (Lei)</th>
+                </tr>
+                <tr>
+                    <td>Cost combustibil</td>
+                    <td id="fuel-cost">-</td>
+                </tr>
+                <tr>
+                    <td>Cost asigurare</td>
+                    <td id="insurance-cost-value">-</td>
+                </tr>
+                <tr>
+                    <td>Cost întreținere</td>
+                    <td id="maintenance-cost-value">-</td>
+                </tr>
+                <tr>
+                    <th>Total estimat</th>
+                    <th id="total-estimate">-</th>
+                </tr>
+            </table>
+        </div>
+    </div>
     <h2>3. Comparare între modele auto</h2>
     <p>Compară două sau mai multe modele auto pentru a alege cel mai economic.</p>
 
     <p><b>Testează gratuit serviciile noastre și economisește bani inteligent!</b></p>
+    <script src="../assets/js/services.js"></script>
 </body>
 </html>

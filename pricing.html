@@ -8,6 +8,7 @@
 </head>
 <body>
     <nav>
+        <button id="theme-toggle">🌙 Mod întunecat</button> |
         <a href="index.html">Acasă</a> |
         <a href="services.html">Servicii</a> |
         <a href="pricing.html">Prețuri</a> |
@@ -22,24 +23,31 @@
             <th>Plan</th>
             <th>Beneficii</th>
             <th>Preț</th>
+            <th>Acțiune</th>
         </tr>
         <tr>
             <td><b>Basic</b></td>
             <td>Acces gratuit la calcul consum combustibil</td>
             <td>0€</td>
+            <td><button class="choose-plan" data-plan="Basic">Alege</button></td>
         </tr>
         <tr>
             <td><b>Premium</b></td>
             <td>Estimare costuri + comparare modele auto</td>
             <td>10€/lună</td>
+            <td><button class="choose-plan" data-plan="Premium">Alege</button></td>
         </tr>
         <tr>
             <td><b>Pro</b></td>
             <td>Toate funcționalitățile + suport dedicat</td>
             <td>20€/lună</td>
+            <td><button class="choose-plan" data-plan="Pro">Alege</button></td>
         </tr>
     </table>
-
-    <p><b>Alege planul care ți se potrivește și începe acum!</b></p>
+    <p id="thank-you-message" style="display: none;"></p>
+    
+    <p id="selected-plan-message" style="display: none;"></p>
+    
+    <script src="../assets/js/pricing.js"></script>
 </body>
 </html>

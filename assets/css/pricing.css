@@ -5,6 +5,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    padding-top: 80px
 }
 
 .container {
@@ -48,7 +49,7 @@ nav a:hover {
 
 img {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     height: auto;
     display: block;
     margin: 20px auto;
@@ -92,4 +93,117 @@ hr {
     background-color: #aaa;
     margin: 20px auto;
     width: 50%;
+}
+/* Mod întunecat pentru întreaga pagină */
+.dark-mode {
+    background-color: #121212; /* Fundal închis */
+    color: #f5f5f5; /* Text alb pentru întregul corp */
+}
+
+/* Modifică culoarea textului pentru titluri, paragrafe și liste */
+.dark-mode h1, .dark-mode h2, .dark-mode p, .dark-mode ul li {
+    color: #f5f5f5; /* Culoare albă pentru text */
+}
+
+/* Navbar stilizat */
+nav {
+    background-color: #003366; /* Bleumarin */
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navbar în dark mode */
+.dark-mode nav {
+    background-color: #222;
+}
+
+/* Link-uri în navbar */
+nav a, #theme-toggle {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 10px;
+    display: inline-block;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Hover pentru link-uri și buton */
+nav a:hover, #theme-toggle:hover {
+    background-color: #002855;
+    border-radius: 5px;
+}
+
+/* Link-uri în dark mode */
+.dark-mode a, .dark-mode #theme-toggle {
+    color: #f5f5f5;
+}
+
+.dark-mode a:hover, .dark-mode #theme-toggle:hover {
+    color: #ffcc00;
+}
+
+/* Integrarea butonului în navbar */
+#theme-toggle {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+/* Imagini - ajustare pentru modul întunecat */
+.dark-mode img {
+    filter: brightness(0.8);
+}
+/* Stilizare tabel în dark mode */
+.dark-mode table {
+    background-color: #1e1e1e; /* Fundal închis */
+    color: #f5f5f5; /* Text alb */
+    border-color: #555; /* Borduri mai puțin intense */
+}
+
+.dark-mode th {
+    background-color: #333; /* Fundal mai închis pentru antet */
+    color: #ffcc00; /* Culoare evidențiată pentru text */
+}
+
+.dark-mode td {
+    background-color: #2a2a2a; /* Fundal puțin mai deschis decât antetul */
+    color: #f5f5f5;
+}
+
+.dark-mode tr:nth-child(even) {
+    background-color: #252525; /* Alternanță pentru rânduri */
+}
+.dark-mode b {
+    background-color: #2a2a2a; /* Fundal puțin mai deschis decât antetul */
+    color: #f5f5f5;
+}
+.choose-plan {
+    background-color: #003366; /* Albastru închis */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.choose-plan:hover {
+    background-color: #002855; /* Albastru și mai închis */
+    transform: scale(1.05);
+}
+
+.choose-plan:active {
+    background-color: #001f3f;
+    transform: scale(1);
 }
