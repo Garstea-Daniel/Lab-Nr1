@@ -9,25 +9,29 @@
 <body>
     <nav>
         <button id="theme-toggle">🌙 Mod întunecat</button> |
-        <a href="index.html">Acasă</a> |
-        <a href="services.html">Servicii</a> |
-        <a href="pricing.html">Prețuri</a> |
-        <a href="about.html">Despre Noi</a> |
-        <a href="contact.html">Contact</a>
+        <a href="index.php">Acasă</a> |
+        <a href="services.php">Servicii</a> |
+        <a href="pricing.php">Prețuri</a> |
+        <a href="about.php">Despre Noi</a> |
+        <a href="contact.php">Contact</a> |
+        <a href="support.php">Suport</a> 
     </nav>
     <img src="../assets/images/contact.png" alt="3">
     <h1>Contactați-ne</h1>
     <p>Pentru orice întrebări, ne puteți contacta folosind formularul de mai jos:</p>
 
-    <form>
-        <label>Nume:</label>
-        <input type="text" name="nume"><br><br>
-        <label>Email:</label>
-        <input type="email" name="email"><br><br>
-        <label>Mesaj:</label><br>
-        <textarea name="mesaj" rows="5" cols="40"></textarea><br><br>
-        <input type="submit" value="Trimite">
-    </form>
+    <form action="support.php" method="POST">
+    <label>Nume:</label>
+    <input type="text" name="nume" required><br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email" required><br><br>
+
+    <label>Mesaj:</label><br>
+    <textarea name="mesaj" rows="5" cols="40" required></textarea><br><br>
+
+    <input type="submit" value="Trimite">
+</form>
 
     <h2>Informații de contact</h2>
     <p>Email: contact@autocost.md</p>

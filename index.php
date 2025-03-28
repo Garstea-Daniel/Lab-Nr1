@@ -10,11 +10,12 @@
     <div class="container"> 
         <nav>
             <button id="theme-toggle">🌙 Mod întunecat</button> |
-            <a href="index.html">Acasă</a> |
-            <a href="services.html">Servicii</a> |
-            <a href="pricing.html">Prețuri</a> |
-            <a href="about.html">Despre Noi</a> |
-            <a href="contact.html">Contact</a> 
+            <a href="index.php">Acasă</a> |
+            <a href="services.php">Servicii</a> |
+            <a href="pricing.php">Prețuri</a> |
+            <a href="about.php">Despre Noi</a> |
+            <a href="contact.php">Contact</a> |
+            <a href="support.php">Suport</a> 
         </nav>
         <img src="../assets/images/home.png" alt="1"> 
 
