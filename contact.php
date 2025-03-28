@@ -20,16 +20,16 @@
     <h1>Contactați-ne</h1>
     <p>Pentru orice întrebări, ne puteți contacta folosind formularul de mai jos:</p>
 
-    <form action="support.php" method="POST">
+    <form action="cod.php" method="post">
     <label>Nume:</label>
     <input type="text" name="nume" required><br><br>
-
+    
     <label>Email:</label>
     <input type="email" name="email" required><br><br>
-
+    
     <label>Mesaj:</label><br>
     <textarea name="mesaj" rows="5" cols="40" required></textarea><br><br>
-
+    
     <input type="submit" value="Trimite">
 </form>
 

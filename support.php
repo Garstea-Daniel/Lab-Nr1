@@ -1,21 +1,3 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obține datele din formular
-    $nume = htmlspecialchars($_POST['nume']);
-    $email = htmlspecialchars($_POST['email']);
-    $mesaj = htmlspecialchars($_POST['mesaj']);
-
-    // Deschide fișierul pentru a adăuga mesajul
-    $file = "messages.txt";
-    $message = "Nume: $nume\nEmail: $email\nMesaj: $mesaj\n\n";
-
-    file_put_contents($file, $message, FILE_APPEND);
-
-    // Redirect către pagina de contact după trimitere
-    header("Location: contact.php");
-    exit();
-}
-?>
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -38,15 +20,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h1>Mesajele primite</h1>
 
     <div id="messages">
-        <?php
-        // Verifică dacă există mesaje salvate
-        $file = "messages.txt";
-        if (file_exists($file) && filesize($file) > 0) {
-            echo "<pre>" . file_get_contents($file) . "</pre>";
-        } else {
-            echo "<p>Momentan nu există mesaje.</p>";
-        }
-        ?>
+            <?php
+            $file = "messages.json";
+            if (file_exists($file)) {
+                // Citim conținutul fișierului JSON
+                $jsonData = file_get_contents($file);
+                $messages = json_decode($jsonData, true);
+
+                // Afișăm fiecare mesaj
+                if (!empty($messages)) {
+                    foreach ($messages as $msg) {
+                        echo "<div class='message-box'>";
+                        echo "<strong>Nume:</strong> " . htmlspecialchars($msg["nume"]) . "<br>";
+                        echo "<strong>Email:</strong> " . htmlspecialchars($msg["email"]) . "<br>";
+                        echo "<strong>Mesaj:</strong> " . nl2br(htmlspecialchars($msg["mesaj"])) . "<br>";
+                        echo "<small>Trimis la: " . htmlspecialchars($msg["data"]) . "</small>";
+                        echo "</div><hr>";
+                    }
+                } else {
+                    echo "<p>Nu există mesaje încă.</p>";
+                }
+            } else {
+                echo "<p>Nu există mesaje încă.</p>";
+            }
+            ?>
+        </div>
     </div>
     <div class="back-button-container">
     <a href="contact.php">Înapoi la formular</a>
