@@ -30,8 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Salvăm array-ul înapoi în fișier, convertit în JSON
     file_put_contents($file, json_encode($messages, JSON_PRETTY_PRINT));
 
-    // Redirect către support.php
-    header("Location: support.php");
+    // Răspunde cu mesajul de succes (pentru AJAX)
+    echo "Mesajul a fost trimis cu succes!";
     exit();
 }
 ?>

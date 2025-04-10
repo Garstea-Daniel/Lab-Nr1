@@ -16,26 +16,30 @@
         <a href="contact.php">Contact</a> |
         <a href="support.php">Suport</a> 
     </nav>
+
     <img src="../assets/images/contact.png" alt="3">
     <h1>Contactați-ne</h1>
     <p>Pentru orice întrebări, ne puteți contacta folosind formularul de mai jos:</p>
 
-    <form action="cod.php" method="post">
+    <form id="contact-form">
     <label>Nume:</label>
     <input type="text" name="nume" required><br><br>
-    
+
     <label>Email:</label>
     <input type="email" name="email" required><br><br>
-    
+
     <label>Mesaj:</label><br>
     <textarea name="mesaj" rows="5" cols="40" required></textarea><br><br>
-    
+
     <input type="submit" value="Trimite">
 </form>
+
+<div id="raspuns"></div>
 
     <h2>Informații de contact</h2>
     <p>Email: contact@autocost.md</p>
     <p>Telefon: +373 123 456 789</p>
-    <script src="../assets/js/index.js"></script>
+
+    <script src="../assets/js/contact.js"></script>
 </body>
 </html>
