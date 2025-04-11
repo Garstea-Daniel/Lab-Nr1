@@ -26,7 +26,7 @@
     <input type="text" name="nume" required><br><br>
 
     <label>Email:</label>
-    <input type="email" name="email" required><br><br>
+    <input type="email" name="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|ru)$" title="Emailul trebuie să conțină @ și să se termine cu .com sau .ru"><br><br>
 
     <label>Mesaj:</label><br>
     <textarea name="mesaj" rows="5" cols="40" required></textarea><br><br>
@@ -39,7 +39,8 @@
     <h2>Informații de contact</h2>
     <p>Email: contact@autocost.md</p>
     <p>Telefon: +373 123 456 789</p>
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../assets/js/contact.js"></script>
 </body>
 </html>

@@ -1,11 +1,9 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obține datele din formular
-    $nume = htmlspecialchars($_POST['nume']);
-    $email = htmlspecialchars($_POST['email']);
-    $mesaj = htmlspecialchars($_POST['mesaj']);
+    $nume = htmlspecialchars(trim($_POST["nume"]));
+    $email = htmlspecialchars(trim($_POST["email"]));
+    $mesaj = htmlspecialchars(trim($_POST["mesaj"]));
 
-    // Creează un nou mesaj sub formă de array asociativ
     $newMessage = [
         "nume" => $nume,
         "email" => $email,
@@ -34,4 +32,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Mesajul a fost trimis cu succes!";
     exit();
 }
-?>

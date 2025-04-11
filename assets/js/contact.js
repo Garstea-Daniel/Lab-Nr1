@@ -1,26 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
-    const raspuns = document.getElementById("raspuns");
+$('#contact-form').on('submit', function(e) {
+    e.preventDefault(); 
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault(); // Previne trimiterea tradițională a formularului
+    const email = $('input[name="email"]').val();
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|ru)$/;
 
-        const formData = new FormData(form);
+    if (!emailPattern.test(email)) {
+        $('#raspuns').html('<p style="color: red;">Emailul trebuie să conțină @ și să se termine cu .com sau .ru.</p>');
+        return;
+    }
 
-        // Trimite datele cu AJAX
-        fetch("cod.php", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.text()) // Răspunsul va fi mesajul de succes sau eroare
-        .then(data => {
-            raspuns.textContent = data; // Afișează mesajul în div-ul "raspuns"
-            raspuns.style.color = "green"; // Poți personaliza stilul aici
-            form.reset(); // Curăță formularul după trimitere
-        })
-        .catch(err => {
-            raspuns.textContent = "A apărut o eroare la trimiterea mesajului.";
-            raspuns.style.color = "red";
-        });
+    $.ajax({
+        type: 'POST',
+        url: 'contact_process.php',
+        data: $(this).serialize(),
+        success: function(response) {
+            $('#raspuns').html('<p style="color: green;">' + response + '</p>');
+            $('#contact-form')[0].reset();
+        },
+        error: function() {
+            $('#raspuns').html('<p style="color: red;">Eroare la trimiterea formularului.</p>');
+        }
     });
 });
